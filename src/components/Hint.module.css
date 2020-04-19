@@ -1,0 +1,66 @@
+.Hint{
+    display: grid;
+    grid-template-areas: 
+    'Title'
+    'Content';
+    grid-template-rows: 50px 1fr;
+    background-color: lawngreen;
+    height: 100%;
+}
+.Hint .Title{
+    grid-area: Title;
+    font-family: SCDream;
+    font-size: 30px;
+    text-align: center;
+}
+.Hint .Content{
+    grid-area: Content;
+    position: relative;
+    background-color: khaki;
+}
+.Hint .Content .Timer{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: SCDream;
+    font-size: 50px;
+    text-align: center;
+}
+.Hint .Content .Text{
+    background-color: lightblue;
+    word-break:break-all;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.FadeIn{
+    animation: fadeIn 0.2s ease-in-out forwards;
+}
+.FadeOut{
+    animation: fadeOut 0.2s ease-in-out forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}

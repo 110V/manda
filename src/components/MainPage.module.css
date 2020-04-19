@@ -1,0 +1,51 @@
+.MainPage{
+    padding-top: 150px;
+    width:100vw;
+    background-color: #FCEDE4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainPage .content{
+    display: flex column;
+    width:400px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainPage .description{
+    font-size: 25px;
+    text-align: center;
+    font-family: SCDream;
+    color:#663300;
+    margin-bottom: 120px;
+    user-select: none;
+}
+
+
+/*작을떄*/
+@media screen and (max-width: 580px) {
+    .MainPage .content{
+        width :69vw;
+    }
+    .MainPage .description{
+        font-size: 4.3vw;
+    }
+}
+
+
+.fadeOutDown{
+    animation: fadeOutDown 1s forwards;
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform:translateY(40px);
+    }
+  }

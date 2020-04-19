@@ -1,0 +1,13 @@
+.WrongWords{
+    background-color: tomato;
+    text-align: center;
+    display: grid; 
+    align-items: center;
+    justify-content: center;
+}
+.WrongWords div{
+    font-family: 'Noto Sans KR', sans-serif;
+    width: max-content;
+    white-space: nowrap;
+
+}

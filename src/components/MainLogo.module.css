@@ -1,0 +1,17 @@
+.MainLogo{
+    width: 100%;
+    display: flex;
+}
+.Alphabet{
+    vertical-align: bottom;
+    max-width: 100%;
+    animation: up 1s ease-in-out forwards;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+@keyframes up {
+    from {transform:translate(0,0);}
+    to {transform:translate(0,-80vh);}
+  }

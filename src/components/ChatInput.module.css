@@ -1,0 +1,31 @@
+.ChatInput{
+    height: 30px;
+    background-color: #FADFCF;
+    border-bottom: #F1AB81 solid 2px;
+    display: flex;
+    justify-content: space-between;
+}
+.ChatInput .Input{
+    margin-left: 10px;
+    flex-grow: 1;
+    height:100%;
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.ChatInput .SendBtn{
+    margin-right: 0;
+    justify-content: end;
+    font-family: SCDream;
+    background: none;
+    border: none;
+    color: #BA643D;
+    font-size: 15px;
+}
+.ChatInput .SendBtn:hover{
+    color: #CD8569;
+}
+.ChatInput .SendBtn:focus{
+    outline: none;
+}

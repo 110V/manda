@@ -1,0 +1,20 @@
+.GamePageDownSection{
+    display: grid;
+    grid-template-areas:
+    'MsgList MsgList MsgList QuestionList'
+    'MsgList MsgList MsgList QuestionList'
+    'ChatInput ChatInput ChatInput QuestionList';
+    grid-template-columns: auto auto auto 200px;
+    grid-template-rows: 1fr 1fr auto;
+}
+.QuestionList{
+    grid-area: QuestionList;
+    background-color: slategray;
+}
+.MsgList{
+    grid-area: MsgList;
+    background-color: springgreen;
+}
+.ChatInput{
+    grid-area: ChatInput;
+}

@@ -1,0 +1,42 @@
+.NicknameInput{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.NicknameInput .TextInput{
+    box-sizing: border-box;
+    width: 62%;
+    max-width: 250px;
+    height:40px;
+    border: none;
+    font-family: SCDream;
+    color: #666666;
+    padding: 10px;
+    font-size: 20px;
+    transition: background-color 0.4s ease;
+    transition: color 0.4s ease;
+}
+.NicknameInput .TextInput:hover{
+    background-color:#DFDFFF;
+}
+.NicknameInput .TextInput:focus{
+    background-color:#FDFEFF;
+    color:black
+}
+.NicknameInput .Button{
+    margin-top: 10px;
+    width: 62%;
+    max-width: 250px;
+    height:35px;
+    border: none;
+    font-family: SCDream;
+    background-color: #F4C0A2;
+    font-size: 20px;
+    color: #AC4B11;
+    transition: background-color 0.4s ease;
+}
+.NicknameInput .Button:hover{
+    background-color:#EFA87C;
+}

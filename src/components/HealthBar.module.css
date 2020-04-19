@@ -1,0 +1,21 @@
+.HealthBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.HealthBar .Text{
+    font-family: SCDream;
+    font-size: 30px;
+    color: red;
+    margin-bottom: 3px;
+}
+.HealthBar .BarContainer{
+    background-color: #FFC8C8;
+    height: 4px;
+    width: 100%;
+}
+.HealthBar .BarContainer div{
+    background-color: red;
+    transition: width 0.4s ease;
+    height: 100%;
+}

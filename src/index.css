@@ -1,13 +1,30 @@
+@font-face {
+  font-family: 'SCDream';
+  src: local('SCDream'), url(./fonts/SCDream2.otf) format('opentype');
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
 body {
-  margin: 0;
+  
+  margin:0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root{
+  --color-background:#FCEDE4;
+  --color-text:#333333;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
 }
