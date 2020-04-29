@@ -37,6 +37,8 @@
 .Down{
     grid-area: Down;
     background-color: white;
+    overflow: hidden;
+    margin: 0 20px;
 }
 
 /*Up*/

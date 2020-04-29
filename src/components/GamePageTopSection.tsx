@@ -19,8 +19,8 @@ const GamePageTopSection:React.FC<Props> = (props)=>{
             </div>
             <div className={style.Left}>
                 <div className={style.Title}>틀린 철자/단어</div>
-                <WrongElementList className={style.WrongSpellList} fontSize = {50} words = {["A"]}/>
-                <WrongElementList className={style.WrongWordList} fontSize = {20} words = {["gorani"]}/>
+                <WrongElementList className={style.WrongSpellList} fontSize = {50} words = {["A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A"]} lineMaxCount = {15}/>
+                <WrongElementList className={style.WrongWordList} fontSize = {20} words = {["gorani","gorani","gorani","gorani","gorani","gorani","gorani","gorani","gorani","gorani","gorani"]} lineMaxCount = {5}/>
             </div>
             <div className={style.Middle}>
 
@@ -29,7 +29,7 @@ const GamePageTopSection:React.FC<Props> = (props)=>{
                 <Hint className = {style.Hint} timeLeft={10} content="고라니를 넣은 스파게티는 맛있다." hintVisible={false} sec={10}/>
             </div>
             <div className={style.Down}>
-                <QuestionView className={style.QuestionView}/>
+                <QuestionView className={style.QuestionView} content="pneumonoultramicroscopicsilicovolcanoconiosis" />
             </div>
         </div>
     );

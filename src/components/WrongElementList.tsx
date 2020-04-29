@@ -6,13 +6,29 @@ interface Props{
     className: string;
     fontSize: number;
     words: string[];
+    lineMaxCount: number;
 }
 
 const WrongElementList:React.FC<Props>=(props)=>{
     const [temp,tempset] = useState<string>("헉");
     let textHtml:HTMLDivElement|null;
     let containerHtml:HTMLDivElement|null;
-    useEffect(() => {
+
+    const wordsToString = (words:string[],lineMaxCount:number)=>{
+        let out:string = "";
+        for(let i = 0; i<words.length; i++){
+            out+=words[i];
+            if(i!=0 && (i+1)%lineMaxCount == 0){
+               out+="\n";
+            }
+            else{
+                out+=" ";
+            }
+        }
+        return out;
+    }
+
+    const autoSize = () => {
         if(!containerHtml||!textHtml)
         {
             return;
@@ -20,20 +36,32 @@ const WrongElementList:React.FC<Props>=(props)=>{
         let maxWidth = containerHtml.clientWidth;
         let maxHeight = containerHtml.clientHeight;
         let width = textHtml.clientWidth
-        let  height = textHtml.clientHeight
-        
+        let height = textHtml.clientHeight
+
+        let scale = 1;
         if(width>maxWidth)
         {
-            textHtml.style.fontSize = Math.min(props.fontSize,(parseInt(textHtml.style.fontSize) - ((width-maxWidth)/textHtml.innerHTML.length)*1.3))+"px";
+            scale = (maxWidth/width);
+        }
+        if(height>maxHeight)
+        {  
+            const hscale = maxHeight/height;
+            scale = hscale<scale?hscale:scale;
         }
         
-        
+        textHtml.style.scale = String(scale)
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', autoSize)
+    },[]);
+    useEffect(() => {
+        autoSize();
     });
 
     return (
             <div ref={ref => { containerHtml = ref}}  className={classnames(style.WrongWords, props.className)}>
-                <div ref={ref => { textHtml = ref }} style={{fontSize:props.fontSize}}>{temp+(props.words?props.words.join(" "):"No word")}</div>
-                <button onClick={()=>{tempset(temp+" 헉")}}></button>
+                <div ref={ref => { textHtml = ref }} style={{fontSize:props.fontSize}}>{(wordsToString(props.words,props.lineMaxCount))}</div>
             </div>
         );
 

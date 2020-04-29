@@ -1,21 +1,31 @@
 .QuestionView{
-    width: 100%;
+    width: min-content;
     height: 100%;
-
+    
+    position: relative;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
     
     display: grid;
     grid-auto-flow: column;
-    column-gap: 30px;
-    grid-template-columns: repeat(auto-fit,50px);
+    column-gap: 10px;
+    grid-template-columns: repeat(auto-fit,max-content);
     justify-content: center;
     align-content: center;
+    background-color: yellowgreen;
 }
 .QuestionView .Char{
     font-family: 'Noto Sans Kr','sans-serif';
     text-align: center;
+    width: max-content;
     font-size: 30px;
 }
 .QuestionView .UnderLine{
     background-color: black;
     height: 2px;
+    width: 30px;
+}
+.QuestionView .Blank{
+    width: 15px;
 }

@@ -1,13 +1,16 @@
 .WrongWords{
-    background-color: tomato;
+    position: relative;
     text-align: center;
     display: grid; 
-    align-items: center;
-    justify-content: center;
+    /* overflow: hidden; */
+    margin: 0 20px;
 }
 .WrongWords div{
-    font-family: 'Noto Sans KR', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
     width: max-content;
-    white-space: nowrap;
-
+    font-family: 'Noto Sans KR', sans-serif;
+    white-space: pre-wrap;
 }
